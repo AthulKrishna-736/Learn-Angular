@@ -14,6 +14,11 @@ export class ToDoListComponent {
   value1 = input.required<string>()
   label = input('', {transform: upperCaseString })
   signalValue = signal(0)
+
+  handleOutputEvent (data: any | null) {
+    console.log('logging even data: ', data);
+    
+  }
 }
 
 function upperCaseString (val: string) {

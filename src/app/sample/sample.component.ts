@@ -1,4 +1,4 @@
-import { Component, input, model } from '@angular/core';
+import { Component, input, model, output } from '@angular/core';
 
 @Component({
   selector: 'app-sample',
@@ -9,6 +9,8 @@ import { Component, input, model } from '@angular/core';
 })
 export class SampleComponent {
   modelValue = model(0)
+
+  outPutValue = output<void>()
 
   increment() {
     if (this.modelValue() >= 5) {

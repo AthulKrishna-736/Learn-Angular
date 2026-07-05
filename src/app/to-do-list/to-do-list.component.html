@@ -5,4 +5,6 @@
 
 <p>signal updates when model updates {{signalValue()}}</p>
 
-<app-sample [(modelValue)]="signalValue"/>
+<button (click)="handleOutputEvent($event)">handle even button</button>
+
+<app-sample [(modelValue)]="signalValue" (outPutValue)="handleOutputEvent($event)"/>
