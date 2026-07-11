@@ -1,5 +1,5 @@
 import { Component, input, model, signal } from '@angular/core';
-import { SampleComponent } from '../sample/sample.component'; 
+import { SampleComponent } from '../sample/sample.component';
 
 @Component({
   selector: 'app-to-do-list',
@@ -10,19 +10,19 @@ import { SampleComponent } from '../sample/sample.component';
 })
 
 export class ToDoListComponent {
-  value = input(0) 
+  value = input(0)
   value1 = input.required<string>()
-  label = input('', {transform: upperCaseString })
+  label = input('', { transform: upperCaseString })
   signalValue = signal(0)
 
-  handleOutputEvent (data: any | null) {
+  handleOutputEvent(data: any | null) {
     console.log('logging even data: ', data);
-    
+
   }
 }
 
-function upperCaseString (val: string) {
-  if(val != null || val != "") {
+function upperCaseString(val: string) {
+  if (val != null || val != "") {
     return val.toUpperCase()
   }
 

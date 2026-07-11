@@ -10,9 +10,14 @@ import { Component, input, model, output } from '@angular/core';
 export class SampleComponent {
   modelValue = model(0)
 
-  outPutValue = output<void>()
+  outPutValue = output<number>()
+
+  sampleEmitEvent() {
+    this.outPutValue.emit(10)
+  }
 
   increment() {
+    this.sampleEmitEvent()
     if (this.modelValue() >= 5) {
       alert('reached top')
       return
@@ -21,7 +26,7 @@ export class SampleComponent {
   }
 
   decrement() {
-    if (this.modelValue() <= -5){
+    if (this.modelValue() <= -5) {
       alert('reached bottom')
       return
     }
