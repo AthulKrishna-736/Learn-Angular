@@ -2,7 +2,12 @@
 
 <p>Model Value: {{modelValue()}}</p>
 
-<button (click)="increment()" >
+<div>
+    NG content sharing
+    <ng-content />
+</div>
+
+<button (click)="increment()">
     Increment
 </button>
 

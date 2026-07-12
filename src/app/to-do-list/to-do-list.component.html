@@ -7,4 +7,6 @@
 
 <button (click)="handleOutputEvent($event)">handle even button</button>
 
-<app-sample [(modelValue)]="signalValue" (outPutValue)="handleOutputEvent($event)"/>
+<app-sample [(modelValue)]="signalValue" (outPutValue)="handleOutputEvent($event)">
+    <p>this is projected ng content to this child for app sample for sample component</p>
+</app-sample>

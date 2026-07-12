@@ -1,4 +1,5 @@
 import { Component, input, model, output } from '@angular/core';
+import { ɵEmptyOutletComponent } from "@angular/router";
 
 @Component({
   selector: 'app-sample',
